@@ -1,0 +1,64 @@
+:root {
+  /* OBS Canvas Width */
+  --canvas-width: 1920px;
+
+  /* OBS Canvas Height */
+  --canvas-height: 1080px;
+
+  /* Desired Image Width */
+  --image-width: 200px;
+
+  /* Desired Image Height */
+  --image-height: 200px;
+
+  /* Image Name/Source */
+  --image-source: url('./images/online.png');
+
+  /* Image Animation Speed */
+  --image-speed: 1;
+}
+
+body {
+  margin: 0;
+}
+
+.canvas {
+  width: var(--canvas-width);
+  height: var(--canvas-height);
+  background-color: black;
+}
+
+.image {
+  width: var(--image-width);
+  height: var(--image-height);
+  background-image: url('./images/online.png');
+  background-size: contain;
+}
+
+.div-x {
+  animation: calc(4.1s / var(--image-speed)) linear infinite alternate moveX;
+}
+
+.div-y {
+  animation: calc(3.15s / var(--image-speed)) linear infinite alternate moveY;
+}
+
+@keyframes moveX {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(calc(var(--canvas-width) - var(--image-width)));
+  }
+}
+
+@keyframes moveY {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(calc(var(--canvas-height) - var(--image-height)));
+  }
+}
