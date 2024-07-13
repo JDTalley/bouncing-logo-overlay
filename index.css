@@ -1,21 +1,21 @@
 :root {
   /* OBS Canvas Width */
-  --canvas-width: 1920px;
+  --canvas-width: 2560px;
 
   /* OBS Canvas Height */
-  --canvas-height: 1080px;
+  --canvas-height: 1440px;
 
   /* Desired Image Width */
-  --image-width: 200px;
+  --image-width: 250px;
 
   /* Desired Image Height */
-  --image-height: 200px;
+  --image-height: 250px;
 
   /* Image Name/Source */
-  --image-source: url('./images/online.png');
+  --image-source: url("./images/profile.png");
 
   /* Image Animation Speed */
-  --image-speed: 1;
+  --image-speed: 0.85;
 }
 
 body {
@@ -30,8 +30,10 @@ body {
 .image {
   width: var(--image-width);
   height: var(--image-height);
-  background-image: url('./images/online.png');
+  background-image: var(--image-source);
   background-size: contain;
+  border-radius: 50%;
+  border: white 3px solid;
 }
 
 .div-x {
